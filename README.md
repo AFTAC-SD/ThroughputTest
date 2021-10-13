@@ -1,5 +1,5 @@
 # Influx-stress
-This program is designed to let the user test write limits to an influxdb.  It is setup by default to look for an internally*(This is configurable to externally hosted at the CLI)* hosted influxdb on port 8086.  It will write to a new database called 'stress' *(This is configurable at the CLI)*.
+This program is designed to let the user test write limits to an influxdb.  It is setup by default to look for an internally *(This is configurable to externally hosted at the CLI)* hosted influxdb on port 8086.  It will write to a new database called 'stress' *(This is configurable at the CLI)*.
 
 For pulling this in, inside of grafana, you need to change the database name in the database source page, to read 'stress'.  This should immediately turn on the data in the panels for viewing.
 

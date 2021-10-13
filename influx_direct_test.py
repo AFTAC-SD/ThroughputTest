@@ -42,20 +42,6 @@ def df_toInflux(data,data_type,host,port,username,password,database,measurement)
     except TypeError as e:
         print("\n[!] ERROR:",e,"\n")
 
-
-
-rdata=linspace(0,1,linlength)   #create some dummy analog data
-
-now = datetime.datetime.now()   #start at now for easy grafana/chronograf viewing
-
-now = now + datetime.timedelta(hours=4) # utc adjust im too lazy to do the datetime version
-
-then = now + datetime.timedelta(seconds=1)  #end time 1 second later
-t = pd.date_range(now, then, periods=linlength).to_pydatetime() #create time index based on now, with linspace entries
-df = pd.DataFrame({'time':t, 'analog':rdata})   #make the df
-df = df.set_index('time')                       #make it time indexed
-print(df)
-
 df_toInflux(data= df,
 			data_type="iq",
 			host='localhost',
@@ -65,6 +51,17 @@ df_toInflux(data= df,
 			database='telegraf',
 			measurement='speedtest')
 
+
+
+
+rdata=linspace(0,1,linlength)   #create some dummy analog data
+now = datetime.datetime.now()   #start at now for easy grafana/chronograf viewing
+now = now + datetime.timedelta(hours=4) # utc adjust im too lazy to do the datetime version
+then = now + datetime.timedelta(seconds=1)  #end time 1 second later
+t = pd.date_range(now, then, periods=linlength).to_pydatetime() #create time index based on now, with linspace entries
+df = pd.DataFrame({'time':t, 'analog':rdata})   #make the df
+df = df.set_index('time')                       #make it time indexed
+print(df)
 
 
 

@@ -5,7 +5,7 @@ For pulling this in, inside of grafana, you need to change the database name in 
 
 The stress program writes multiple tags under a single measurement called 'ctr'.  Even though these are separate tags, the architecture appears to stitches them back together for viewers like grafana.  This splitting into different 'series' is something that can be controlled at the CLI for influx-stress, so you are able to see the performance difference between 1 series *(what most people use for a measurement)* and some other larger value *(100,000 in the case of 2M samples per second)*.
 
-# Installing on arm64 devices, pull the program by running:
+# Installing on arm64 devices
 <code>git clone https://go.googlesource.com/go goroot</code>
 
 go into the src folder and run binary influx-stress

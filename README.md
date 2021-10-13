@@ -8,13 +8,7 @@ The stress program writes multiple tags under a single measurement called 'ctr'.
 # Installing on arm64 devices, pull the program by running:
 <code>git clone https://go.googlesource.com/go goroot</code>
 
-go into the src folder and run:
-
-<code>./influx-stress insert -r 1m --pps 1000000</code>
-
-where the -r tag set to *1m* is the duration of 1 minute, can be adjusted to secounds, hours, days as well
-
-where the --pps tag set to *1000000* sets the points per second to test to 1 million
+go into the src folder and run binary influx-stress
 
 # Installing on x86 devices
 install go via:
@@ -24,3 +18,16 @@ https://golang.org/doc/install
 then run:
 
 <code>go get -v github.com/influxdata/influx-stress/cmd/...</code>
+
+You can then run influx-stress globally on your machine.
+
+# Running influx-stress
+Influx-stress has a comprehensive help section.  The quick start run command is as follows:
+
+<code>./influx-stress insert -r 1m --pps 1000000</code>
+
+where the -r tag set to *1m* is the duration of 1 minute, can be adjusted to secounds, hours, days as well
+
+where the --pps tag set to *1000000* sets the points per second to test to 1 million
+
+

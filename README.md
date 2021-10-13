@@ -8,7 +8,7 @@ The stress program writes multiple tags under a single measurement called 'ctr'.
 # Installing on arm64 devices
 <code>git clone https://go.googlesource.com/go goroot</code>
 
-go into the src folder and run binary influx-stress
+This will create a folder in your present working directory.  CD into that new folder.  CD into the src folder and run binary influx-stress
 
 # Installing on x86 devices
 install go via:

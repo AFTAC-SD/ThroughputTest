@@ -9,7 +9,7 @@ The stress program writes multiple tags under a single measurement called 'ctr'.
 <code>git clone https://go.googlesource.com/go goroot</code>
 
 go into the src folder and run:
->./influx-stress insert -r 1m --pps 1000000
+<code>./influx-stress insert -r 1m --pps 1000000</code>
 
 where 1m is the duration of 1 minute, can be adjusted to secounds, hours, days as well
 &
@@ -20,4 +20,4 @@ install go via:
 https://golang.org/doc/install
 
 then run:
->go get -v github.com/influxdata/influx-stress/cmd/...
+<code>go get -v github.com/influxdata/influx-stress/cmd/...</code>
